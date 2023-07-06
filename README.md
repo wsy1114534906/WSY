@@ -21,20 +21,27 @@ pip install -r requirements.txt
 
 ## 文件结构
 ```
-|-- large-scale # experiments for 6 large-scale datasets
-    |-- data/ # some large-scale datasets
-    |-- dataset/  # the remaining large-scale datasets
-    |-- experiments/  # all run shs
-    |-- main.py # the main code
-    |-- main_z.py # obtains coefficient matrix z 
-    |-- models.py # includes all model implementations
-|-- paper-plots # all experimental plots in our paper
-|-- small-scale # experiments for 9 small-scale datasets
-    |-- data/ # 3 old datasets, including cora, citeseer, and pubmed
-    |-- new-data/ # 6 new datasets, including texas, wisconsin, cornell, actor, squirrel, and chameleon
-    |-- splits/ # splits for 6 new datasets
-    |-- sh/ # all run shs
-    |-- main.py  # the main code
-    |-- main_z.py  # obtains coefficient matrix z
-    |-- main_h.py # obtains final layer embedding h
+|-- tokenizer # 分词器依赖的配置文件
+    |-- config.json
+    |-- vocab.txt
+|-- model.py # 模型代码
+|-- multi_model.py # 其他函数代码
+|-- README.md
+|-- requirements.txt # 代码执行环境
+|-- data # 数据文件
+    |-- __MACOSX
+    |-- data # 图片、文本
+    |-- test_without_label.txt
+    |-- train.txt
+|-- result # 实验结果文件
+|-- 实验5.doc # 实验报告
 ```
+
+## 代码执行
+命令行输入 (all/img/txt)(True/False)
+```
+python multi_model.py –mode all –data_aug True
+```
+
+## 参考
+实验三、深度学习期末作业
